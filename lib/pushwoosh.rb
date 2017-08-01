@@ -1,7 +1,6 @@
 require 'pushwoosh/version'
 require 'pushwoosh/push_notification'
 require 'pushwoosh/configurable'
-require 'httparty'
 require 'pushwoosh/helpers'
 
 module Pushwoosh

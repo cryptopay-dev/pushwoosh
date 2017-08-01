@@ -43,20 +43,6 @@ describe Pushwoosh::Request do
       }
     end
 
-    context 'when url is not empty' do
-      subject { described_class.new('/createMessage', options) }
-
-      it 'sends the notification with valid params' do
-        allow(described_class).to receive(:post).with('/createMessage', body: body.to_json).and_return(response)
-        allow(response).to receive(:parsed_response).and_return(OpenStruct.new(response_hash))
-        response_of_make_post = subject.make_post!
-
-        expect(response_of_make_post.status_code).to eq 200
-        expect(response_of_make_post.status_message).to eq 'OK'
-        expect(response_of_make_post.response['Messages']).to eq ['555555534563456345']
-      end
-    end
-
     context 'when url is empty' do
       it 'raises an error' do
         expect do

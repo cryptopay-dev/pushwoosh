@@ -1,4 +1,3 @@
-require 'httparty'
 require 'json'
 require 'pushwoosh/exceptions'
 require 'pushwoosh/request'

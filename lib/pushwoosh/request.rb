@@ -1,12 +1,8 @@
-require 'httparty'
+require 'net/http'
+require 'json'
 
 module Pushwoosh
   class Request
-    include HTTParty
-
-    base_uri 'https://cp.pushwoosh.com/json/1.3/'
-    format :json
-
     def self.make_post!(*args)
       new(*args).make_post!
     end
@@ -14,9 +10,10 @@ module Pushwoosh
     def initialize(url, options = {})
       validations!(url, options)
 
+      base_uri = 'https://cp.pushwoosh.com/json/1.3'
       @options = options
       @notification_options = options.fetch(:notification_options)
-      @url = url
+      @url = [base_uri, url].join
       @base_request = {
         request: {
           application: options[:application],
@@ -26,8 +23,12 @@ module Pushwoosh
     end
 
     def make_post!
-      response = self.class.post(url, body: build_request.to_json).parsed_response
-      Response.new(response)
+      response = Net::HTTP.post(
+        URI(url),
+        build_request.to_json,
+        'Content-Type': 'application/json'
+      )
+      Response.new(JSON.parse(response.body))
     end
 
     private

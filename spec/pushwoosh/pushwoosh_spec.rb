@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Pushwoosh do
   before do
     Pushwoosh.configure do |config|
-      config.application = '5555-5555'
-      config.auth = 'abcefg'
+      config.application = '55555-55555'
+      config.auth = 'abcdef'
     end
   end
 
