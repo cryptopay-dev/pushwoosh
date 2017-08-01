@@ -1,8 +1,8 @@
 Pushwoosh
 =========
-[![Build Status](https://travis-ci.org/pedroandrade/pushwoosh.svg?branch=master)](https://travis-ci.org/pedroandrade/pushwoosh)
-[![Code Climate](https://codeclimate.com/github/pedroandrade/pushwoosh/badges/gpa.svg)](https://codeclimate.com/github/pedroandrade/pushwoosh)
-[![Test Coverage](https://codeclimate.com/github/pedroandrade/pushwoosh/badges/coverage.svg)](https://codeclimate.com/github/pedroandrade/pushwoosh)
+[![Build Status](https://travis-ci.org/cryptopay-dev/pushwoosh.svg?branch=master)](https://travis-ci.org/cryptopay-dev/pushwoosh)
+[![Code Climate](https://codeclimate.com/github/cryptopay-dev/pushwoosh/badges/gpa.svg)](https://codeclimate.com/github/cryptopay-dev/pushwoosh)
+[![Test Coverage](https://codeclimate.com/github/cryptopay-dev/pushwoosh/badges/coverage.svg)](https://codeclimate.com/github/cryptopay-dev/pushwoosh)
 
 This a simple wrapper to pushwoosh remote API
 
