@@ -10,14 +10,12 @@ module Pushwoosh
     def_delegator :options, :hash
 
     class << self
-
       def keys
-        @keys ||= [
-          :application,
-          :auth,
+        @keys ||= %i[
+          application
+          auth
         ]
       end
-
     end
 
     def configure
@@ -26,7 +24,7 @@ module Pushwoosh
       self
     end
 
-  private
+    private
 
     # @return [Hash]
     def credentials
@@ -38,7 +36,7 @@ module Pushwoosh
 
     # @return [Hash]
     def options
-      Hash[Pushwoosh::Configurable.keys.map{|key| [key, instance_variable_get(:"@#{key}")]}]
+      Hash[Pushwoosh::Configurable.keys.map { |key| [key, instance_variable_get(:"@#{key}")] }]
     end
 
     def validate_credential_type!
@@ -50,6 +48,5 @@ module Pushwoosh
         end
       end
     end
-
   end
 end

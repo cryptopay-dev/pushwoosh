@@ -1,0 +1,25 @@
+# Configuration parameters: CountComments, ExcludedMethods.
+Metrics/BlockLength:
+  Max: 76
+
+# Configuration parameters: AllowHeredoc, AllowURI, URISchemes, IgnoreCopDirectives, IgnoredPatterns.
+# URISchemes: http, https
+Metrics/LineLength:
+  Max: 142
+
+# Configuration parameters: EnforcedStyle, SupportedStyles.
+# SupportedStyles: nested, compact
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'lib/pushwoosh/exceptions.rb'
+
+# Offense count: 5
+Style/Documentation:
+  Exclude:
+    - 'spec/**/*'
+    - 'test/**/*'
+    - 'lib/pushwoosh.rb'
+    - 'lib/pushwoosh/configurable.rb'
+    - 'lib/pushwoosh/helpers.rb'
+    - 'lib/pushwoosh/push_notification.rb'
+    - 'lib/pushwoosh/request.rb'

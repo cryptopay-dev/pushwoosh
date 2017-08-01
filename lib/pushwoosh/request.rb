@@ -35,9 +35,9 @@ module Pushwoosh
     attr_reader :options, :base_request, :notification_options, :url
 
     def validations!(url, options)
-      fail Pushwoosh::Exceptions::Error, 'Missing application' unless options.fetch(:application)
-      fail Pushwoosh::Exceptions::Error, 'Missing auth key' unless options.fetch(:auth)
-      fail Pushwoosh::Exceptions::Error, 'URL is empty' if url.nil? || url.empty?
+      raise Pushwoosh::Exceptions::Error, 'Missing application' unless options.fetch(:application)
+      raise Pushwoosh::Exceptions::Error, 'Missing auth key' unless options.fetch(:auth)
+      raise Pushwoosh::Exceptions::Error, 'URL is empty' if url.nil? || url.empty?
     end
 
     def build_request
