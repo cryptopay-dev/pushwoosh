@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    pushwoosh (1.0.1)
+    pushwoosh (1.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -53,4 +53,4 @@ DEPENDENCIES
   webmock (~> 2.3)
 
 BUNDLED WITH
-   1.14.6
+   1.15.3

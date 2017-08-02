@@ -5,7 +5,7 @@ http_interactions:
     uri: https://cp.pushwoosh.com/json/1.3/createMessage
     body:
       encoding: UTF-8
-      string: '{"request":{"application":"55555-55555","auth":"abcdef","notifications":[{"send_date":"now","ios_badges":"+1","content":"Testing"}]}}'
+      string: '{"request":{"application":"1839E-B6B3E","auth":"53cPdOY1gKxBpxBUEj12erycG4U5S5IF9wRhaluliCt5OaOSSLEMc6z6q5aYq6prfrFkUz4bMnjUZhkdywaC","notifications":[{"send_date":"now","ios_badges":"+1","content":"Testing"}]}}'
     headers:
       Content-Type:
       - application/json
@@ -23,7 +23,7 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Tue, 01 Aug 2017 14:10:42 GMT
+      - Wed, 02 Aug 2017 13:13:13 GMT
       Content-Type:
       - application/json; charset=utf8
       Transfer-Encoding:
@@ -41,10 +41,10 @@ http_interactions:
       X-Pw-Cluster-Node:
       - api-11
       X-Pw-Front-Node:
-      - front-07
+      - front-01
     body:
       encoding: UTF-8
-      string: '{"status_code":200,"status_message":"OK","response":{"Messages":["E96A-0800FA6D-D852A3CC"]}}'
+      string: '{"status_code":200,"status_message":"OK","response":{"Messages":["F8A4-6DEFEE3E-E5787004"]}}'
     http_version: 
-  recorded_at: Tue, 01 Aug 2017 14:10:41 GMT
+  recorded_at: Wed, 02 Aug 2017 13:13:13 GMT
 recorded_with: VCR 3.0.3

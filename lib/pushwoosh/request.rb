@@ -23,11 +23,8 @@ module Pushwoosh
     end
 
     def make_post!
-      response = Net::HTTP.post(
-        URI(url),
-        build_request.to_json,
-        'Content-Type': 'application/json'
-      )
+      uri = URI(url)
+      response = http(uri).request(request(uri, build_request.to_json))
       Response.new(JSON.parse(response.body))
     end
 
@@ -39,6 +36,19 @@ module Pushwoosh
       raise Pushwoosh::Exceptions::Error, 'Missing application' unless options.fetch(:application)
       raise Pushwoosh::Exceptions::Error, 'Missing auth key' unless options.fetch(:auth)
       raise Pushwoosh::Exceptions::Error, 'URL is empty' if url.nil? || url.empty?
+    end
+
+    def request(uri, body)
+      req = Net::HTTP::Post.new(uri.request_uri, 'Content-Type' => 'application/json')
+      req.body = body
+      req
+    end
+
+    def http(uri)
+      client = Net::HTTP.new(uri.host, uri.port)
+      client.use_ssl = true
+      client.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      client
     end
 
     def build_request
