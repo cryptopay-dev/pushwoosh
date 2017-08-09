@@ -2,7 +2,6 @@ require 'json'
 require 'pushwoosh/exceptions'
 require 'pushwoosh/request'
 require 'pushwoosh/response'
-require 'pushwoosh/helpers'
 
 module Pushwoosh
   class PushNotification

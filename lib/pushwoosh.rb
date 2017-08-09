@@ -1,7 +1,6 @@
 require 'pushwoosh/version'
 require 'pushwoosh/push_notification'
 require 'pushwoosh/configurable'
-require 'pushwoosh/helpers'
 
 module Pushwoosh
   extend Pushwoosh::Configurable
