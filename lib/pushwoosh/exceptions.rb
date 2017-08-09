@@ -1,3 +1,5 @@
-module Pushwoosh::Exceptions
-  class Error < StandardError; end
+module Pushwoosh
+  module Exceptions
+    class Error < StandardError; end
+  end
 end
